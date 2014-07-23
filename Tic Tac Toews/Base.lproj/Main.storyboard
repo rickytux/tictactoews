@@ -58,6 +58,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="UIButtonClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Iqh-E2-dR3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eFQ-ik-77a">
                                 <rect key="frame" x="107" y="0.0" width="106" height="189"/>
@@ -65,6 +68,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="UIButtonClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dUC-1v-Zfa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CF8-xY-JEL">
                                 <rect key="frame" x="214" y="0.0" width="106" height="189"/>
@@ -72,6 +78,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="UIButtonClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pB6-R0-aSs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qhf-Dz-8V8">
                                 <rect key="frame" x="0.0" y="189" width="106" height="189"/>
@@ -79,6 +88,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="UIButtonClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="H2j-qM-8Ux"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Xo5-ac-ObO">
                                 <rect key="frame" x="107" y="189" width="106" height="189"/>
@@ -86,6 +98,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="UIButtonClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ml6-yL-5xg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0Jn-Ji-j0M">
                                 <rect key="frame" x="214" y="189" width="106" height="189"/>
@@ -93,6 +108,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="UIButtonClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rWE-6S-IsB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Vu6-Bj-y05">
                                 <rect key="frame" x="0.0" y="379" width="106" height="189"/>
@@ -100,6 +118,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="UIButtonClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mop-u2-4VW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yLO-CN-N7a">
                                 <rect key="frame" x="107" y="379" width="106" height="189"/>
@@ -107,6 +128,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="UIButtonClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2Oj-RJ-UlY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Sdx-ny-tbd">
                                 <rect key="frame" x="214" y="379" width="106" height="189"/>
@@ -114,6 +138,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="UIButtonClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kRZ-hh-8nh"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OUT-lQ-kC7">
                                 <rect key="frame" x="61" y="214" width="198" height="139"/>

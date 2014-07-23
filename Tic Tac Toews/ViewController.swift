@@ -38,19 +38,37 @@ class ViewController: UIViewController {
     var aiDeciding = false
     
     @IBAction func UIButtonClicked(sender:UIButton) {
-        userMessage.hidden = true
-        if !plays[sender.tag] && aiDeciding && !done {
+        userMessage.hidden = false
+        if !plays[sender.tag] && !aiDeciding && !done {
             setImageForSpot(sender.tag, player:1)
         }
         checkForWin()
         aiTurn()
     }
     func setImageForSpot(spot:Int,player:Int) {
-        var playerMark = player == 1 ? "x" : "o"
+        var playerMark = player == 1 ? "X" : "o"
         plays[spot] = player
         switch spot {
         case 1:
-            ticTacImg1.image = UIImageView
+            ticTacImg1.image = UIImage(named: playerMark)
+        case 2:
+            ticTacImg2.image = UIImage(named: playerMark)
+        case 3:
+            ticTacImg3.image = UIImage(named: playerMark)
+        case 4:
+            ticTacImg4.image = UIImage(named: playerMark)
+        case 5:
+            ticTacImg5.image = UIImage(named: playerMark)
+        case 6:
+            ticTacImg6.image = UIImage(named: playerMark)
+        case 7:
+            ticTacImg7.image = UIImage(named: playerMark)
+        case 8:
+            ticTacImg8.image = UIImage(named: playerMark)
+        case 9:
+            ticTacImg9.image = UIImage(named: playerMark)
+        default:
+            ticTacImg1.image = UIImage(named: playerMark)
         }
     }
     
