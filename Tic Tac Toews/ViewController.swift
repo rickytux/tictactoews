@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     var aiDeciding = false
     
     @IBAction func UIButtonClicked(sender:UIButton) {
-        userMessage.hidden = false
+        userMessage.hidden = true
         if !plays[sender.tag] && !aiDeciding && !done {
             setImageForSpot(sender.tag, player:1)
         }
@@ -71,13 +71,78 @@ class ViewController: UIViewController {
             ticTacImg1.image = UIImage(named: playerMark)
         }
     }
-    
-    func checkForWin() {
+    @IBAction func resetBtnClicked(sender:UIButton) {
+        done = false
+        resetBtn.hidden = true
+        userMessage.hidden = true
+        reset()
+    }
+    func reset() {
+        plays = [:]
+        ticTacImg1.image = nil
+        ticTacImg2.image = nil
+        ticTacImg3.image = nil
+        ticTacImg4.image = nil
+        ticTacImg5.image = nil
+        ticTacImg6.image = nil
+        ticTacImg7.image = nil
+        ticTacImg8.image = nil
+        ticTacImg9.image = nil
         
     }
     
+    func checkForWin() {
+        var whoWon = ["I":0, "you":1]
+        for(key,value) in whoWon {
+            if((plays[1] == value && plays[2] == value && plays[3] == value) ||
+            (plays[4] == value && plays[5] == value && plays[6] == value) ||
+            (plays[7] == value && plays[8] == value && plays[9] == value) ||
+            (plays[1] == value && plays[4] == value && plays[7] == value) ||
+            (plays[2] == value && plays[5] == value && plays[8] == value) ||
+            (plays[3] == value && plays[6] == value && plays[9] == value) ||
+            (plays[1] == value && plays[5] == value && plays[9] == value) ||
+                (plays[3] == value && plays[5] == value && plays[7] == value)){
+                    userMessage.hidden = false
+                    userMessage.text = "Looks like \(key) won!"
+                    resetBtn.hidden = false
+            }
+        }
+    }
+    
+    func checkBottom(#value:Int) -> (location:String,pattern:String) {
+        return ("bottom",checkFor(value, inList: [7,8,9]))
+    }
+    func checkFor(value:Int, inList:[Int]) -> String {
+        var conclusion = ""
+        for cell in inList {
+            if plays[cell] == value {
+                conclusion += "1"
+            }else {
+                conclusion += "0"
+            }
+        }
+    }
+    func rowCheck(#value:Int) -> (location:String,pattern:String)? {
+        var acceptableFinds = ["011","110","101"]
+        var findFuncs = [checkTop,checkBottom,checkMiddle,checkLeft,checkRight,checkCenter,checkDiagLR,checkDiagRL]
+        for algorthm in findFuncs {
+            var algorthmResults = algorthm(value:value)
+            if find(acceptableFinds, algorthmResults.pattern) {
+                return algorthmResults
+            }
+        }
+    }
+    
     func aiTurn(){
-        
+        if done {
+            return
+        }
+        aiDeciding = true
+        // two in a row
+        if let result = rowCheck(value:0) {
+            
+        }
+        aiDeciding = false
     }
     
     override func viewDidLoad() {
