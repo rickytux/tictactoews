@@ -112,6 +112,27 @@ class ViewController: UIViewController {
     func checkBottom(#value:Int) -> (location:String,pattern:String) {
         return ("bottom",checkFor(value, inList: [7,8,9]))
     }
+    func checkMiddle(#value:Int) -> (location:String,pattern:String) {
+        return ("middle",checkFor(value, inList: [4,5,6]))
+    }
+    func checkTop(#value:Int) -> (location:String,pattern:String) {
+        return ("top",checkFor(value, inList: [1,2,3]))
+    }
+    func checkLeft(#value:Int) -> (location:String,pattern:String) {
+        return ("left",checkFor(value, inList: [1,4,7]))
+    }
+    func checkCenter(#value:Int) -> (location:String,pattern:String) {
+        return ("center",checkFor(value, inList: [2,5,8]))
+    }
+    func checkRight(#value:Int) -> (location:String,pattern:String) {
+        return ("right",checkFor(value, inList: [3,6,9]))
+    }
+    func checkDiagLR(#value:Int) -> (location:String,pattern:String) {
+        return ("diaglr",checkFor(value, inList: [1,5,9]))
+    }
+    func checkDiagRL(#value:Int) -> (location:String,pattern:String) {
+        return ("diagrl",checkFor(value, inList: [3,5,7]))
+    }
     func checkFor(value:Int, inList:[Int]) -> String {
         var conclusion = ""
         for cell in inList {
@@ -121,6 +142,7 @@ class ViewController: UIViewController {
                 conclusion += "0"
             }
         }
+        return conclusion
     }
     func rowCheck(#value:Int) -> (location:String,pattern:String)? {
         var acceptableFinds = ["011","110","101"]
@@ -131,6 +153,7 @@ class ViewController: UIViewController {
                 return algorthmResults
             }
         }
+        return nil
     }
     
     func aiTurn(){
@@ -140,9 +163,84 @@ class ViewController: UIViewController {
         aiDeciding = true
         // two in a row
         if let result = rowCheck(value:0) {
-            
+            var whereToPlayResult = whereToPlay(result.location,pattern:result.pattern)
         }
         aiDeciding = false
+    }
+    
+    func whereToPlay(location:String,pattern:String) ->Int {
+        var leftPattern = "011"
+        var rightPattern = "110"
+        var middlePatter = "101"
+    
+        switch location {
+            case "top":
+                if pattern == leftPattern{
+                    return 1
+                }else if pattern == rightPattern {
+                    return 3
+                }else {
+                    return 2
+                }
+            case "bottom":
+                if pattern == leftPattern{
+                    return 7
+                }else if pattern == rightPattern {
+                    return 9
+                }else {
+                    return 8
+                }
+            case "left":
+                if pattern == leftPattern{
+                    return 1
+                }else if pattern == rightPattern {
+                    return 7
+                }else {
+                    return 4
+                }
+            case "right":
+                if pattern == leftPattern{
+                    return 3
+                }else if pattern == rightPattern {
+                    return 9
+                }else {
+                    return 6
+                }
+            case "center":
+                if pattern == leftPattern{
+                    return 2
+                }else if pattern == rightPattern {
+                    return 9
+                }else {
+                    return 5
+                }
+            case "middle":
+                if pattern == leftPattern{
+                    return 4
+                }else if pattern == rightPattern {
+                    return 6
+                }else {
+                    return 5
+                }
+            case "diagrl":
+                if pattern == leftPattern{
+                    return 3
+                }else if pattern == rightPattern {
+                    return 7
+                }else {
+                    return 5
+                }
+            case "diaglr":
+                if pattern == leftPattern{
+                    return 1
+                }else if pattern == rightPattern {
+                    return 9
+                }else {
+                    return 5
+                }
+            default:
+                return 1
+        }
     }
     
     override func viewDidLoad() {
