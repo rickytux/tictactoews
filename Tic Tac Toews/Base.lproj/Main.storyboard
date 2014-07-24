@@ -155,8 +155,8 @@
                                     <action selector="resetBtnClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PlU-dM-L8d"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wgk-Xq-gk9">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wgk-Xq-gk9">
+                                <rect key="frame" x="39" y="0.0" width="243" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.1213828424" green="1" blue="0.9993552751" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.062754755434782594" green="0.060820676501751061" blue="0.025676626259613429" alpha="1" colorSpace="calibratedRGB"/>

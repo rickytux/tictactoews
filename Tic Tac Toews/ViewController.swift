@@ -39,12 +39,14 @@ class ViewController: UIViewController {
     
     @IBAction func UIButtonClicked(sender:UIButton) {
         userMessage.hidden = true
+//        println(sender.tag)
+//        println(isOccupied(sender.tag))
         if !plays[sender.tag] && !aiDeciding && !done {
             setImageForSpot(sender.tag, player:1)
-        }
         checkForWin()
         checkForTie()
         aiTurn()
+        }
     }
     func setImageForSpot(spot:Int,player:Int) {
         var playerMark = player == 1 ? "X" : "o"
@@ -190,20 +192,9 @@ class ViewController: UIViewController {
             checkForWin()
             return
         }
-        if (plays[1]==1 && plays[9]==1 && !isOccupied(4)) {
-            setImageForSpot(4, player: 0)
-            aiDeciding = false
-            checkForWin()
-            return
-        }
-        if (plays[3]==1 && plays[7]==1) {
-            setImageForSpot(6, player: 0)
-            aiDeciding = false
-            checkForWin()
-            return
-        }
         if let result = rowCheck(value:0) {
             var whereToPlayResult = whereToPlay(result.location,pattern:result.pattern)
+            println(whereToPlayResult)
             if !isOccupied(whereToPlayResult) {
                 setImageForSpot(whereToPlayResult, player: 0)
                 aiDeciding = false
@@ -213,6 +204,7 @@ class ViewController: UIViewController {
         }
         if let result = rowCheck(value:1) {
             var whereToPlayResult = whereToPlay(result.location,pattern:result.pattern)
+            println(whereToPlayResult)
             if !isOccupied(whereToPlayResult) {
                 setImageForSpot(whereToPlayResult, player: 0)
                 aiDeciding = false
@@ -220,8 +212,27 @@ class ViewController: UIViewController {
                 return
             }
         }
-        
-//        
+
+        if (plays[1]==1 && plays[9]==1 && !isOccupied(4)) {
+            setImageForSpot(4, player: 0)
+            aiDeciding = false
+            checkForWin()
+            return
+        }
+        if (plays[3]==1 && plays[7]==1 && !isOccupied(6)) {
+            setImageForSpot(6, player: 0)
+            aiDeciding = false
+            checkForWin()
+            return
+        }
+        if (plays[7]==1 && plays[4]==1 && !isOccupied(1)) {
+            setImageForSpot(1, player: 0)
+            aiDeciding = false
+            checkForWin()
+            return
+        }
+                
+
         if let cornerAvailable = firstAvailable(isCorner:true) {
             setImageForSpot(cornerAvailable, player: 0)
             aiDeciding = false
