@@ -39,8 +39,7 @@ class ViewController: UIViewController {
     
     @IBAction func UIButtonClicked(sender:UIButton) {
         userMessage.hidden = true
-//        println(sender.tag)
-//        println(isOccupied(sender.tag))
+
         if !plays[sender.tag] && !aiDeciding && !done {
             setImageForSpot(sender.tag, player:1)
         checkForWin()
@@ -185,16 +184,17 @@ class ViewController: UIViewController {
             return
         }
         aiDeciding = true
-        // two in a row
+        // go for middle if available
         if !isOccupied(5){
             setImageForSpot(5, player: 0)
             aiDeciding = false
             checkForWin()
             return
         }
+        //ai to go for win if it has two in a row
         if let result = rowCheck(value:0) {
             var whereToPlayResult = whereToPlay(result.location,pattern:result.pattern)
-            println(whereToPlayResult)
+    
             if !isOccupied(whereToPlayResult) {
                 setImageForSpot(whereToPlayResult, player: 0)
                 aiDeciding = false
@@ -202,6 +202,32 @@ class ViewController: UIViewController {
                 return
             }
         }
+        // edge cases still trying to figure out why they aren't included in the blocking strategy
+        if (plays[3]==1 && plays[9]==1 && !isOccupied(6)) {
+            setImageForSpot(6, player: 0)
+            aiDeciding = false
+            checkForWin()
+            return
+        }
+        if (plays[5]==1 && plays[8]==1 && !isOccupied(2)) {
+            setImageForSpot(2, player: 0)
+            aiDeciding = false
+            checkForWin()
+            return
+        }
+        if (plays[1]==1 && plays[7]==1 && !isOccupied(4)) {
+            setImageForSpot(4, player: 0)
+            aiDeciding = false
+            checkForWin()
+            return
+        }
+        if (plays[5]==1 && plays[2]==1 && !isOccupied(8)) {
+            setImageForSpot(8, player: 0)
+            aiDeciding = false
+            checkForWin()
+            return
+        }
+        //ai needs to block when user has 2 in a row
         if let result = rowCheck(value:1) {
             var whereToPlayResult = whereToPlay(result.location,pattern:result.pattern)
             println(whereToPlayResult)
@@ -212,7 +238,7 @@ class ViewController: UIViewController {
                 return
             }
         }
-
+        //block for fork trap
         if (plays[1]==1 && plays[9]==1 && !isOccupied(4)) {
             setImageForSpot(4, player: 0)
             aiDeciding = false
@@ -225,14 +251,7 @@ class ViewController: UIViewController {
             checkForWin()
             return
         }
-        if (plays[7]==1 && plays[4]==1 && !isOccupied(1)) {
-            setImageForSpot(1, player: 0)
-            aiDeciding = false
-            checkForWin()
-            return
-        }
-                
-
+        //this is for when there is no threat or strategic move to be made
         if let cornerAvailable = firstAvailable(isCorner:true) {
             setImageForSpot(cornerAvailable, player: 0)
             aiDeciding = false
@@ -252,7 +271,7 @@ class ViewController: UIViewController {
     func whereToPlay(location:String,pattern:String) ->Int {
         var leftPattern = "011"
         var rightPattern = "110"
-        var middlePatter = "101"
+        var middlePattern = "101"
     
         switch location {
             case "top":
@@ -291,7 +310,7 @@ class ViewController: UIViewController {
                 if pattern == leftPattern{
                     return 2
                 }else if pattern == rightPattern {
-                    return 9
+                    return 8
                 }else {
                     return 5
                 }
