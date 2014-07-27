@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD319E7A19843F6F00432A6A /* Tic_Tac_Toews_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD319E7919843F6F00432A6A /* Tic_Tac_Toews_Tests.swift */; };
 		CD809D5D197F5BBE006D627D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD809D5C197F5BBE006D627D /* AppDelegate.swift */; };
 		CD809D5F197F5BBE006D627D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD809D5E197F5BBE006D627D /* ViewController.swift */; };
 		CD809D62197F5BBE006D627D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD809D60197F5BBE006D627D /* Main.storyboard */; };
@@ -15,6 +16,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CD319E7B19843F6F00432A6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD809D4F197F5BBE006D627D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD809D56197F5BBE006D627D;
+			remoteInfo = "Tic Tac Toews";
+		};
 		CD809D6A197F5BBE006D627D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CD809D4F197F5BBE006D627D /* Project object */;
@@ -25,6 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD319E7519843F6F00432A6A /* Tic Tac Toews Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tic Tac Toews Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD319E7819843F6F00432A6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD319E7919843F6F00432A6A /* Tic_Tac_Toews_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tic_Tac_Toews_Tests.swift; sourceTree = "<group>"; };
 		CD809D57197F5BBE006D627D /* Tic Tac Toews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tic Tac Toews.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD809D5B197F5BBE006D627D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD809D5C197F5BBE006D627D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +48,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CD319E7219843F6F00432A6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CD809D54197F5BBE006D627D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -54,11 +72,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD319E7619843F6F00432A6A /* Tic Tac Toews Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CD319E7919843F6F00432A6A /* Tic_Tac_Toews_Tests.swift */,
+				CD319E7719843F6F00432A6A /* Supporting Files */,
+			);
+			path = "Tic Tac Toews Tests";
+			sourceTree = "<group>";
+		};
+		CD319E7719843F6F00432A6A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD319E7819843F6F00432A6A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		CD809D4E197F5BBE006D627D = {
 			isa = PBXGroup;
 			children = (
 				CD809D59197F5BBE006D627D /* Tic Tac Toews */,
 				CD809D6C197F5BBE006D627D /* Tic Tac ToewsTests */,
+				CD319E7619843F6F00432A6A /* Tic Tac Toews Tests */,
 				CD809D58197F5BBE006D627D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +104,7 @@
 			children = (
 				CD809D57197F5BBE006D627D /* Tic Tac Toews.app */,
 				CD809D69197F5BBE006D627D /* Tic Tac ToewsTests.xctest */,
+				CD319E7519843F6F00432A6A /* Tic Tac Toews Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +149,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CD319E7419843F6F00432A6A /* Tic Tac Toews Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD319E7F19843F6F00432A6A /* Build configuration list for PBXNativeTarget "Tic Tac Toews Tests" */;
+			buildPhases = (
+				CD319E7119843F6F00432A6A /* Sources */,
+				CD319E7219843F6F00432A6A /* Frameworks */,
+				CD319E7319843F6F00432A6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD319E7C19843F6F00432A6A /* PBXTargetDependency */,
+			);
+			name = "Tic Tac Toews Tests";
+			productName = "Tic Tac Toews Tests";
+			productReference = CD319E7519843F6F00432A6A /* Tic Tac Toews Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CD809D56197F5BBE006D627D /* Tic Tac Toews */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD809D73197F5BBE006D627D /* Build configuration list for PBXNativeTarget "Tic Tac Toews" */;
@@ -156,6 +211,10 @@
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Rick Dsida";
 				TargetAttributes = {
+					CD319E7419843F6F00432A6A = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = CD809D56197F5BBE006D627D;
+					};
 					CD809D56197F5BBE006D627D = {
 						CreatedOnToolsVersion = 6.0;
 					};
@@ -180,11 +239,19 @@
 			targets = (
 				CD809D56197F5BBE006D627D /* Tic Tac Toews */,
 				CD809D68197F5BBE006D627D /* Tic Tac ToewsTests */,
+				CD319E7419843F6F00432A6A /* Tic Tac Toews Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CD319E7319843F6F00432A6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CD809D55197F5BBE006D627D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -204,6 +271,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CD319E7119843F6F00432A6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD319E7A19843F6F00432A6A /* Tic_Tac_Toews_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CD809D53197F5BBE006D627D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -224,6 +299,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CD319E7C19843F6F00432A6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD809D56197F5BBE006D627D /* Tic Tac Toews */;
+			targetProxy = CD319E7B19843F6F00432A6A /* PBXContainerItemProxy */;
+		};
 		CD809D6B197F5BBE006D627D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CD809D56197F5BBE006D627D /* Tic Tac Toews */;
@@ -243,6 +323,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CD319E7D19843F6F00432A6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tic Tac Toews.app/Tic Tac Toews";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tic Tac Toews Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		CD319E7E19843F6F00432A6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tic Tac Toews.app/Tic Tac Toews";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tic Tac Toews Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
 		CD809D71197F5BBE006D627D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -379,6 +493,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CD319E7F19843F6F00432A6A /* Build configuration list for PBXNativeTarget "Tic Tac Toews Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD319E7D19843F6F00432A6A /* Debug */,
+				CD319E7E19843F6F00432A6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		CD809D52197F5BBE006D627D /* Build configuration list for PBXProject "Tic Tac Toews" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -395,6 +517,7 @@
 				CD809D75197F5BBE006D627D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD809D76197F5BBE006D627D /* Build configuration list for PBXNativeTarget "Tic Tac ToewsTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +526,7 @@
 				CD809D78197F5BBE006D627D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

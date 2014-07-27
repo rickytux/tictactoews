@@ -38,6 +38,16 @@
                ReferencedContainer = "container:Tic Tac Toews.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CD319E7419843F6F00432A6A"
+               BuildableName = "Tic Tac Toews Tests.xctest"
+               BlueprintName = "Tic Tac Toews Tests"
+               ReferencedContainer = "container:Tic Tac Toews.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

@@ -7,6 +7,12 @@
 //
 
 import UIKit
+//extension Array {
+//    func randomItem() -> T {
+//        let index = Int(arc4random_uniform(<#UInt32#>(self.count)))
+//        return self[index]
+//    }
+//}
 
 class ViewController: UIViewController {
                             
@@ -36,6 +42,8 @@ class ViewController: UIViewController {
     var plays = Dictionary<Int,Int>()
     var done = false
     var aiDeciding = false
+    
+   
     
     @IBAction func UIButtonClicked(sender:UIButton) {
         userMessage.hidden = true
@@ -230,7 +238,7 @@ class ViewController: UIViewController {
         //ai needs to block when user has 2 in a row
         if let result = rowCheck(value:1) {
             var whereToPlayResult = whereToPlay(result.location,pattern:result.pattern)
-            println(whereToPlayResult)
+
             if !isOccupied(whereToPlayResult) {
                 setImageForSpot(whereToPlayResult, player: 0)
                 aiDeciding = false
@@ -247,6 +255,30 @@ class ViewController: UIViewController {
         }
         if (plays[3]==1 && plays[7]==1 && !isOccupied(6)) {
             setImageForSpot(6, player: 0)
+            aiDeciding = false
+            checkForWin()
+            return
+        }
+        if (plays[7]==1 && plays[6]==1 && !isOccupied(9)) {
+            setImageForSpot(9, player: 0)
+            aiDeciding = false
+            checkForWin()
+            return
+        }
+        if (plays[9]==1 && plays[4]==1 && !isOccupied(7)) {
+            setImageForSpot(7, player: 0)
+            aiDeciding = false
+            checkForWin()
+            return
+        }
+        if (plays[3]==1 && plays[8]==1 && !isOccupied(9)) {
+            setImageForSpot(9, player: 0)
+            aiDeciding = false
+            checkForWin()
+            return
+        }
+        if (plays[1]==1 && plays[8]==1 && !isOccupied(7)) {
+            setImageForSpot(7, player: 0)
             aiDeciding = false
             checkForWin()
             return
