@@ -7,12 +7,6 @@
 //
 
 import UIKit
-//extension Array {
-//    func randomItem() -> T {
-//        let index = Int(arc4random_uniform(<#UInt32#>(self.count)))
-//        return self[index]
-//    }
-//}
 
 class ViewController: UIViewController {
                             
@@ -231,6 +225,12 @@ class ViewController: UIViewController {
         }
         if (plays[5]==1 && plays[2]==1 && !isOccupied(8)) {
             setImageForSpot(8, player: 0)
+            aiDeciding = false
+            checkForWin()
+            return
+        }
+        if (plays[8]==1 && plays[6]==1 && !isOccupied(9)) {
+            setImageForSpot(9, player: 0)
             aiDeciding = false
             checkForWin()
             return

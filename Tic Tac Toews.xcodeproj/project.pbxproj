@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD319E7A19843F6F00432A6A /* Tic_Tac_Toews_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD319E7919843F6F00432A6A /* Tic_Tac_Toews_Tests.swift */; };
 		CD809D5D197F5BBE006D627D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD809D5C197F5BBE006D627D /* AppDelegate.swift */; };
 		CD809D5F197F5BBE006D627D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD809D5E197F5BBE006D627D /* ViewController.swift */; };
 		CD809D62197F5BBE006D627D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD809D60197F5BBE006D627D /* Main.storyboard */; };
 		CD809D64197F5BBE006D627D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD809D63197F5BBE006D627D /* Images.xcassets */; };
-		CD809D70197F5BBE006D627D /* Tic_Tac_ToewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD809D6F197F5BBE006D627D /* Tic_Tac_ToewsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,6 +20,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = CD809D56197F5BBE006D627D;
 			remoteInfo = "Tic Tac Toews";
+		};
+		CD4F4CB119858E6100D56005 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD319E8219858D1E00432A6A /* Swiftest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 95F05B49195CE07800B529D1;
+			remoteInfo = Swiftest;
+		};
+		CD4F4CB319858E6100D56005 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD319E8219858D1E00432A6A /* Swiftest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 95F05B54195CE07800B529D1;
+			remoteInfo = SwiftestTests;
 		};
 		CD809D6A197F5BBE006D627D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -34,8 +46,7 @@
 
 /* Begin PBXFileReference section */
 		CD319E7519843F6F00432A6A /* Tic Tac Toews Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tic Tac Toews Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD319E7819843F6F00432A6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD319E7919843F6F00432A6A /* Tic_Tac_Toews_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tic_Tac_Toews_Tests.swift; sourceTree = "<group>"; };
+		CD319E8219858D1E00432A6A /* Swiftest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Swiftest.xcodeproj; path = ../../Swiftest/src/Swiftest/Swiftest.xcodeproj; sourceTree = "<group>"; };
 		CD809D57197F5BBE006D627D /* Tic Tac Toews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tic Tac Toews.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD809D5B197F5BBE006D627D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD809D5C197F5BBE006D627D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,8 +54,6 @@
 		CD809D61197F5BBE006D627D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD809D63197F5BBE006D627D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CD809D69197F5BBE006D627D /* Tic Tac ToewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tic Tac ToewsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD809D6E197F5BBE006D627D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD809D6F197F5BBE006D627D /* Tic_Tac_ToewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tic_Tac_ToewsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,29 +81,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CD319E7619843F6F00432A6A /* Tic Tac Toews Tests */ = {
+		CD4F4CAD19858E6100D56005 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CD319E7919843F6F00432A6A /* Tic_Tac_Toews_Tests.swift */,
-				CD319E7719843F6F00432A6A /* Supporting Files */,
+				CD4F4CB219858E6100D56005 /* libSwiftest.dylib */,
+				CD4F4CB419858E6100D56005 /* SwiftestTests.xctest */,
 			);
-			path = "Tic Tac Toews Tests";
-			sourceTree = "<group>";
-		};
-		CD319E7719843F6F00432A6A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				CD319E7819843F6F00432A6A /* Info.plist */,
-			);
-			name = "Supporting Files";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		CD809D4E197F5BBE006D627D = {
 			isa = PBXGroup;
 			children = (
 				CD809D59197F5BBE006D627D /* Tic Tac Toews */,
-				CD809D6C197F5BBE006D627D /* Tic Tac ToewsTests */,
-				CD319E7619843F6F00432A6A /* Tic Tac Toews Tests */,
 				CD809D58197F5BBE006D627D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,6 +111,7 @@
 		CD809D59197F5BBE006D627D /* Tic Tac Toews */ = {
 			isa = PBXGroup;
 			children = (
+				CD319E8219858D1E00432A6A /* Swiftest.xcodeproj */,
 				CD809D5C197F5BBE006D627D /* AppDelegate.swift */,
 				CD809D5E197F5BBE006D627D /* ViewController.swift */,
 				CD809D60197F5BBE006D627D /* Main.storyboard */,
@@ -125,23 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				CD809D5B197F5BBE006D627D /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		CD809D6C197F5BBE006D627D /* Tic Tac ToewsTests */ = {
-			isa = PBXGroup;
-			children = (
-				CD809D6F197F5BBE006D627D /* Tic_Tac_ToewsTests.swift */,
-				CD809D6D197F5BBE006D627D /* Supporting Files */,
-			);
-			path = "Tic Tac ToewsTests";
-			sourceTree = "<group>";
-		};
-		CD809D6D197F5BBE006D627D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				CD809D6E197F5BBE006D627D /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -235,6 +218,12 @@
 			mainGroup = CD809D4E197F5BBE006D627D;
 			productRefGroup = CD809D58197F5BBE006D627D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CD4F4CAD19858E6100D56005 /* Products */;
+					ProjectRef = CD319E8219858D1E00432A6A /* Swiftest.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CD809D56197F5BBE006D627D /* Tic Tac Toews */,
@@ -243,6 +232,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CD4F4CB219858E6100D56005 /* libSwiftest.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libSwiftest.dylib;
+			remoteRef = CD4F4CB119858E6100D56005 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CD4F4CB419858E6100D56005 /* SwiftestTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftestTests.xctest;
+			remoteRef = CD4F4CB319858E6100D56005 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CD319E7319843F6F00432A6A /* Resources */ = {
@@ -275,7 +281,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD319E7A19843F6F00432A6A /* Tic_Tac_Toews_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +297,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD809D70197F5BBE006D627D /* Tic_Tac_ToewsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +504,7 @@
 				CD319E7E19843F6F00432A6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD809D52197F5BBE006D627D /* Build configuration list for PBXProject "Tic Tac Toews" */ = {
 			isa = XCConfigurationList;
