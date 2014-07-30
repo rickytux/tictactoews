@@ -229,8 +229,14 @@ class ViewController: UIViewController {
             checkForWin()
             return
         }
-        if (plays[8]==1 && plays[6]==1 && !isOccupied(9)) {
-            setImageForSpot(9, player: 0)
+        if (plays[7]==1 && plays[5]==1 && !isOccupied(3)) {
+            setImageForSpot(3, player: 0)
+            aiDeciding = false
+            checkForWin()
+            return
+        }
+        if (plays[3]==1 && plays[5]==1 && !isOccupied(7)) {
+            setImageForSpot(7, player: 0)
             aiDeciding = false
             checkForWin()
             return
@@ -279,6 +285,12 @@ class ViewController: UIViewController {
         }
         if (plays[1]==1 && plays[8]==1 && !isOccupied(7)) {
             setImageForSpot(7, player: 0)
+            aiDeciding = false
+            checkForWin()
+            return
+        }
+        if (plays[5]==1 && plays[7]==1 && !isOccupied(3)) {
+            setImageForSpot(3, player: 0)
             aiDeciding = false
             checkForWin()
             return
